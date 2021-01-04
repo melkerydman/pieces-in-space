@@ -1,0 +1,58 @@
+.moons {
+  --size: 15em;
+
+  position: relative;
+  display: flex;
+  z-index: 99;
+}
+
+.moon {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+
+  font-size: .5em; 
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .5s ease-out;
+
+  &--red {
+    background: #ff7059;
+    background: radial-gradient(circle, #ff7059 0%, #ff3000 100%);
+    box-shadow:  .2em .2em 2em #d95f4c, 
+    -.5em -.5em 2em #ff8166;
+    color: #fff;
+    
+    &:hover {
+    transform: translateX(-5%) translateY(-15%) rotate(35deg);
+    }
+  }
+
+  &--white {
+    background: #f4f4f4;
+    background: radial-gradient(circle, #F9F8E4 0%, #F4F1C9 100%);
+    box-shadow:  .1em .1em 2em #cfcfcf, 
+    -.5em -.5em 3em #fff;
+    color: #ff3000;
+    
+    &:hover {
+      transform: translateX(5%) translateY(-15%) rotate(-35deg);
+    }
+  }
+
+  .fas {
+    font-size: 5em;
+
+    &--red {
+        color: #ff7059;
+      }
+    &--white {
+      color: #F4F1C9;
+    }
+  }
+}

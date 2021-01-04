@@ -1,0 +1,291 @@
+#r2d2.char {
+    
+    // Shadow
+    .char__shadow {
+        &--r2d2 {
+            bottom: 12%;
+            height: 8%;
+            opacity: 1;  // Make shadow visible
+            
+            &::before,
+            &::after {
+                width: 35%;
+                height: 40%;
+                left: 10%;
+                bottom: 0%;
+                opacity: inherit;
+            }
+            &::before {
+                left: 55%;
+            }
+        }
+    } 
+
+    // Adjust character to scale
+    @media screen and (min-width: 768px) {
+        .char__wrap {
+          transform: scale(var(--char-sz-r2d2)); // Adjust scale to match other characters
+        }
+    }
+
+    // Unique shards
+    .char__shard-wrap {
+        
+        &:nth-child(1) .char__shard{
+            clip-path: polygon( 34.141% 86.500% ,36.016% 77.250% ,42.344% 86.500% );
+            background: #f1f2f3;
+        }   
+        &:nth-child(2) .char__shard{
+            clip-path: polygon( 35.938% 77.500% ,39.375% 77.500% ,42.344% 86.505% );
+            background: #FFFFFF;
+        }   
+        &:nth-child(3) .char__shard{
+            clip-path: polygon( 34.375% 45.250% ,34.297% 41.250% ,36.328% 41.375% );
+            background: #4E5499;
+        } 
+        &:nth-child(4) .char__shard{
+            clip-path: polygon( 34.297% 45.125% ,36.172% 41.375% ,36.328% 47.125% );
+            background: #5C6FAF;
+        } 
+        &:nth-child(5) .char__shard{
+            clip-path: polygon( 35.938% 77.800% ,35.938% 32.875% ,39.375% 77.525% );
+            background: #f1f2f3;
+        } 
+        &:nth-child(6) .char__shard{
+            clip-path: polygon( 35.910% 32.875% ,39.300% 77.530% ,39.453% 32.875% );
+            background: #FFFFFF;
+        } 
+        &:nth-child(7) .char__shard{
+            clip-path: polygon( 57.578% 86.225% ,64.063% 77.400% ,65.781% 86.375% );
+            background: #f1f2f3;
+        } 
+        &:nth-child(8) .char__shard{
+            clip-path: polygon( 57.578% 86.250% ,60.547% 77.375% ,64.063% 77.500% );
+            background: #FFFFFF;
+        } 
+        &:nth-child(9) .char__shard{
+            clip-path: polygon( 63.750% 41.250% ,65.781% 45.375% ,65.781% 41.375% );
+            background: #4E5499;
+        } 
+        &:nth-child(10) .char__shard {
+            clip-path: polygon( 63.672% 47.375% ,63.828% 41.250% ,65.781% 45.250% );
+            background: #5C6FAF;
+        } 
+        &:nth-child(11) .char__shard {
+            clip-path: polygon( 60.547% 77.550% ,64.063% 32.875% ,64.063% 77.550% );
+            background: #f1f2f3;
+        } 
+        &:nth-child(12) .char__shard {
+            clip-path: polygon( 60.600% 77.500% ,60.547% 32.875% ,64.100% 33.000% );
+            background: #FFFFFF;
+        } 
+        &:nth-child(13) .char__shard {
+            clip-path: polygon( 41.719% 68.950% ,43.672% 73.875% ,50.150% 68.950% );
+            background: #ACB3B9;            
+        } 
+        &:nth-child(14) .char__shard {
+            clip-path: polygon( 43.600% 73.875% ,49.922% 69.100% ,56.400% 73.875% );
+            background: #D6D9DC;            
+        } 
+        &:nth-child(15) .char__shard {
+            clip-path: polygon( 49.700% 68.950% ,56.328% 73.875% ,58.203% 68.875% );
+            background: #f1f2f3;            
+        } 
+        &:nth-child(16) .char__shard {
+            clip-path: polygon( 39.844% 69.125% ,39.844% 33.000% ,43.650% 69.125% );
+            background: #9FA6AD;        
+        } 
+        &:nth-child(17) .char__shard {
+            clip-path: polygon( 39.824% 33.125% ,43.594% 69.125% ,43.594% 33.125% );
+            background: #ACB3B9;        
+        }
+        &:nth-child(18) .char__shard {
+            clip-path: polygon( 43.550% 69.125% ,43.550% 33.000% ,50.050% 33.000% );
+            background: #BAC0C4;        
+        }
+        &:nth-child(19) .char__shard {
+            clip-path: polygon( 43.520% 69.125% ,49.950% 69.125% ,49.950% 32.975% );
+            background: #C8CCD0;        
+        }
+        &:nth-child(20) .char__shard {
+            clip-path: polygon( 49.922% 69.125% ,49.922% 33.125% ,56.375% 69.125% );
+            background: #D6D9DC;        
+        }
+        &:nth-child(21) .char__shard {
+            clip-path: polygon( 49.875% 33.000% ,56.350% 69.125% ,56.350% 33.000% );
+            background: #E3E6E8;            
+        }
+        &:nth-child(22) .char__shard {
+            clip-path: polygon( 56.300% 69.125% ,56.300% 33.000% ,60.234% 33.125% );
+            background: #f1f2f3;            
+        }
+        &:nth-child(23) .char__shard {
+            clip-path: polygon( 56.275% 69.125% ,60.200% 69.125% ,60.200% 33.025% );
+            background: #FFFFFF;            
+        }
+        &:nth-child(24) .char__shard {
+            clip-path: polygon( 47.813% 59.875% ,47.813% 45.250% ,52.109% 59.875% );
+            background: #435489;            
+        }
+        &:nth-child(25) .char__shard {
+            clip-path: polygon( 47.750% 45.375% ,52.031% 59.750% ,52.109% 45.375% );
+            background: #5468AB;            
+        }
+        &:nth-child(26) .char__shard {
+            clip-path: polygon( 44.325% 42.625% ,55.547% 42.750% ,55.547% 40.700% );
+            background: #5468AB;        
+        }
+        &:nth-child(27) .char__shard {
+            clip-path: polygon( 44.375% 42.675% ,44.375% 40.625% ,55.600% 40.750% );
+            background: #435489;            
+        }
+        &:nth-child(28) .char__shard {
+            clip-path: polygon( 44.375% 38.250% ,44.375% 36.200% ,55.650% 38.250% );
+            background: #5468AB;            
+        }
+        &:nth-child(29) .char__shard {
+            clip-path: polygon( 44.325% 36.250% ,55.547% 38.300% ,55.547% 36.375% );
+            background: #435489;            
+        }
+        &:nth-child(30) .char__shard {
+            clip-path: polygon( 44.375% 34.875% ,55.547% 34.875% ,55.625% 33.125% );
+            background: #5468AB;            
+        }
+        &:nth-child(31) .char__shard {
+            clip-path: polygon( 44.375% 35.000% ,44.375% 33.125% ,55.625% 33.125% );
+            background: #435489;            
+        }
+        &:nth-child(32) .char__shard {
+            clip-path: polygon( 39.844% 33.175% ,40.234% 24.200% ,43.700% 33.175% );
+            background: #6A737C;            
+        }
+        &:nth-child(33) .char__shard {
+            clip-path: polygon( 40.234% 24.250% ,43.594% 33.175% ,44.200% 24.100% );
+            background: #75808A;            
+        }
+        &:nth-child(34) .char__shard {
+            clip-path: polygon( 43.516% 33.175% ,44.063% 24.200% ,50.100% 33.175% );
+            background: #838C95;            
+        }
+        &:nth-child(35) .char__shard {
+            clip-path: polygon( 49.800% 33.175% ,55.781% 24.100% ,56.400% 33.175% );
+            background: #ACB3B9;            
+        }
+        &:nth-child(36) .char__shard {
+            clip-path: polygon( 55.703% 24.250% ,56.328% 33.175% ,59.688% 24.375% );
+            background: #BABFC4;            
+        }
+        &:nth-child(37) .char__shard {
+            clip-path: polygon( 56.200% 33.175% ,59.688% 24.200% ,60.234% 33.175% );
+            background: #C8CCD0;            
+        }
+        &:nth-child(38) .char__shard {
+            clip-path: polygon( 44.063% 24.250% ,49.940% 33.175% ,49.975% 24.000% );
+            background: #9199A1;            
+        }
+        &:nth-child(39) .char__shard {
+            clip-path: polygon( 49.850% 33.175% ,49.922% 24.000% ,55.900% 24.100% );
+            background: #9FA6AD;            
+        }
+        &:nth-child(40) .char__shard {
+            clip-path: polygon( 40.234% 24.250% ,43.650% 16.300% ,44.300% 24.250% );
+            background: #6A737C;            
+        }
+        &:nth-child(41) .char__shard {
+            clip-path: polygon( 43.594% 16.375% ,44.141% 24.375% ,50.000% 12.750% );
+            background: #75808A;            
+        }
+        &:nth-child(42) .char__shard {
+            clip-path: polygon( 44.141% 24.375% ,50.000% 24.125% ,50.000% 12.625% );
+            background: #9199A1;            
+        }
+        &:nth-child(43) .char__shard {
+            clip-path: polygon( 50.000% 24.250% ,50.000% 12.625% ,55.781% 24.250% );
+            background: #9FA6AD;            
+        }
+        &:nth-child(44) .char__shard {
+            clip-path: polygon( 50.000% 12.750% ,55.703% 24.250% ,56.406% 16.375% );
+            background: #BABFC4;            
+        }
+        &:nth-child(45) .char__shard {
+            clip-path: polygon( 55.650% 24.250% ,56.300% 16.225% ,59.750% 24.450% );
+            background: #C8CCD0;            
+        }
+        &:nth-child(46) .char__shard {
+            clip-path: polygon( 39.875% 31.875% ,40.234% 24.250% ,46.925% 24.250% );
+            background: #435489;            
+        }
+        &:nth-child(47) .char__shard {
+            clip-path: polygon( 39.844% 31.750% ,46.875% 31.750% ,46.875% 24.200% );
+            background: #5468AB;            
+        }
+        &:nth-child(48) .char__shard {
+            clip-path: polygon( 47.500% 31.750% ,47.500% 25.500% ,52.400% 25.500% );
+            background: #5468AB;            
+        }
+        &:nth-child(49) .char__shard {
+            clip-path: polygon( 47.450% 31.750% ,52.400% 31.750% ,52.400% 25.450% );
+            background: #435489;            
+        }
+        &:nth-child(50) .char__shard {
+            clip-path: polygon( 55.150% 31.750% ,55.150% 24.200% ,60.250% 31.750% );
+            background: #435489;            
+        }
+        &:nth-child(51) .char__shard {
+            clip-path: polygon( 55.150% 24.250% ,59.725% 24.250% ,60.200% 31.750% );
+            background: #5468AB;            
+        }
+        &:nth-child(52) .char__shard {
+            clip-path: polygon( 47.500% 24.625% ,47.891% 18.000% ,52.031% 18.125% );
+            background: #5468AB;            
+        }
+        &:nth-child(53) .char__shard {
+            clip-path: polygon( 47.813% 18.000% ,52.031% 18.000% ,52.500% 24.625% );
+            background: #5468AB;            
+        }
+        &:nth-child(54) .char__shard {
+            clip-path: polygon( 47.500% 24.625% ,49.922% 18.750% ,52.500% 24.625% );
+            background: #435489;            
+        }
+        &:nth-child(55) .char__shard {
+            clip-path: polygon( 43.594% 16.375% ,50.000% 16.250% ,50.000% 12.625% );
+            background: #435489;            
+        }
+        &:nth-child(56) .char__shard {
+            clip-path: polygon( 50.000% 16.250% ,49.922% 12.625% ,56.375% 16.325% );
+            background: #5468AB;            
+        }
+        &:nth-child(57) .char__shard {
+            clip-path: polygon( 50.313% 27.750% ,51.172% 29.125% ,52.031% 27.625% );
+            background: #e74b58;            
+        }
+        &:nth-child(58) .char__shard {
+            clip-path: polygon( 50.313% 27.750% ,51.172% 26.375% ,52.031% 27.750% );
+            background: #ea626d;            
+        }
+        &:nth-child(59) .char__shard {
+            clip-path: polygon( 48.516% 21.125% ,50.000% 23.500% ,51.484% 21.125% );
+            background: #1f282e;            
+        }
+        &:nth-child(60) .char__shard {
+            clip-path: polygon( 48.438% 21.175% ,50.000% 18.625% ,51.484% 21.175% );
+            background: #29353d;            
+        }
+        &:nth-child(61) .char__shard {
+            clip-path: polygon( 36.406% 47.750% ,36.719% 57.625% ,38.047% 47.875% );
+            background: #6A737C;    
+        }
+        &:nth-child(62) .char__shard {
+            clip-path: polygon( 36.719% 57.250% ,37.891% 47.875% ,37.969% 57.375% );
+            background: #838C95;            
+        }
+        &:nth-child(63) .char__shard {
+            clip-path: polygon( 62.109% 47.750% ,63.281% 57.750% ,63.672% 48.000% );
+            background: #6A737C;            
+        }
+        &:nth-child(64) .char__shard {
+            clip-path: polygon( 61.953% 57.500% ,62.109% 47.750% ,63.438% 57.500% );
+            background: #838C95;            
+        } 
+    } // End of Unique shards
+}

@@ -1,0 +1,103 @@
+// HTML Markup
+
+// <div class="logo">
+//     <p class="logo__main">pieces<br>space</p>
+//     <p class="logo__sub">clip path</p>
+// </div>
+
+// pointer-events: none; // Add to logo container
+
+.logo {
+    position: relative;
+    display: inline-block;
+    
+    padding: .3em 1em; // Set space between main text and border
+
+    font-family: var(--ff-primary) !important;
+    // font-size: 15px; // Font size is set in parent
+    color: var(--clr-yellow-primary);
+    
+    background: var(--clr-bg);
+    border: solid .4em var(--clr-yellow-primary);
+    border-radius: .8em;
+    box-shadow: 0 .3em var(--clr-yellow-dark), 0 .3em var(--clr-yellow-dark) inset;
+
+    transform: skew(-10deg) rotateZ(-10deg);
+
+    // Pieces in Space
+    &__main {
+        position: relative;
+
+        margin: -.05em .05em .2em .05em;
+
+        font-family: var(--ff-primary) !important;
+        font-size: 6em;
+        line-height: .8em;
+        letter-spacing: .03em;
+        text-align: right;
+        text-shadow: 0px .05em var(--clr-yellow-dark);
+        
+        // In
+        &::after {
+            content: 'in';
+            position: absolute;
+            top: 1.2em;
+            left: 1.2em;
+            font-size: .3em;
+            letter-spacing: 0.1em;
+            text-shadow: 0px .14em var(--clr-yellow-dark);
+            transform: scale(1, 0.8);
+        }
+    }
+        
+    // A Clip Path Project
+    &__sub {
+
+        --width: 5.75em;
+
+        position: absolute;
+        top: 5.45em;
+        left: 50%;
+
+        width: var(--width);
+        height: 1em;
+        margin-left: calc(var(--width) / -2);
+        padding-left: .1em;
+
+        white-space: nowrap;
+        font-family: var(--ff-primary) !important;
+        font-size: 1.9em;
+        line-height: 1.3em;
+        letter-spacing: .01em;
+        word-spacing: -.2em;
+        text-shadow: 0 .1em var(--clr-yellow-dark);
+        text-align: left;
+
+        border-top-left-radius: 2em .6em;
+        background: var(--clr-bg);
+
+        // 'A' and 'Project'
+        &::before, &::after {
+            position: absolute;
+            top: .7em;
+            font-family: var(--ff-logo-sub);
+            font-size: 0.45em;
+            font-style: italic;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-shadow: 0 .2em var(--clr-yellow-dark);
+            transform: scale(1, 0.8);
+        }
+        // A
+        &::before {
+            content:'A';
+            left: -.8em;
+        }
+    
+        // Project
+        &::after {
+            content:'PROJECT';
+            left: 13em;
+        }   
+    }
+}

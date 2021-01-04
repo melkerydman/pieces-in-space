@@ -1,0 +1,141 @@
+.hero {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    
+    &__wrap {
+        z-index: 2;
+        font-size: 12px; // Change size of logo
+        margin: 0 auto;
+        padding-top: 4em;
+        grid-column: 1 / 6;
+        grid-row: 1 / 2;
+        pointer-events: none;
+
+        display: flex; // For contact placement
+        gap: .8em;
+
+        .contact {
+            pointer-events: all;
+            transform: translateY(-10%);
+        }
+    }
+    
+    &__moons {
+        z-index: 1;
+        grid-column: 1 / 6;
+        grid-row: 1 / 2;
+        margin: 0 auto;
+
+        .moons {
+            transform: translateY(.4em) translateX(-8em) rotate(-10deg) scale(.75);
+        }
+    }
+    
+    &__char {
+        z-index: 3;
+        position: relative;
+        display: flex;
+        align-items: center;
+        grid-column: 2 / 5;
+        grid-row: 1 / 3;
+        pointer-events: none;
+        
+        .char {
+            transform: scale(2.5);
+        }
+    }
+    
+    @media only screen and (orientation: landscape) {
+        
+        &__char {
+            .char {
+                transform: scale(1);
+            }
+        }
+    }
+    // Tablets
+    @media only screen and (min-width: 768px) {
+        text-align: left;
+        
+        &__wrap {
+            grid-column: 3 / 5;
+            font-size: 13px; // Change size of logo
+        }
+
+        &__moons {
+            grid-column: 3 / 5;
+            transform: translateY(.8em) scale(1);
+        }
+        
+        &__char {
+            grid-column: 1 / 5;
+            
+            .char {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    // Large
+    @media only screen and (min-width: 992px) {
+        
+        &__wrap {
+            font-size: 14px; // Change size of logo
+        }
+
+        &__moons {
+            transform: translateY(2.8em) scale(1.2);
+        }
+
+        &__char {
+            .char {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    // Larger
+    @media only screen and (min-width: 1200px) {
+
+        &__wrap {
+            padding-top: 4em;
+            font-size: 16px; // Change size of logo
+        }
+
+        &__moons {
+            transform: translateY(4.8em) scale(1.3);
+        }
+        
+        &__char {
+            .char {
+                transform: scale(1.3);
+            }
+        }
+    }
+
+    // Gargantuan
+    @media only screen and (min-width: 1600px) {
+        text-align: center;
+
+        &__wrap {
+            grid-column: 1 / 6;
+            padding-top: 5em;
+            font-size: 18px; // Change size of logo
+        }
+        
+        &__moons {
+            grid-column: 1 / 6;
+            transform: translateY(8em) scale(1.4);
+        }
+
+        &__char {
+            grid-column: 1 / 6;
+            
+            .char {
+                transform: scale(1.4);
+            }
+        }
+    }
+}

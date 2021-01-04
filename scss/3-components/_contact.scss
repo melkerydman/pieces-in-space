@@ -1,0 +1,16 @@
+.contact {
+  font-size: 2.5em;
+  
+  a:hover {
+      transition: .5s ease;
+      text-shadow: 2px 2px 4px var(--clr-yellow-primary);
+      transform: scale(1.05);
+    }
+
+  &__social {
+      display: flex;
+      flex-direction: column;
+      gap: .1em;
+      line-height: 0;
+  }
+}

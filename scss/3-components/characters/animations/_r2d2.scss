@@ -1,0 +1,251 @@
+// ===========================================================
+// R2D2 Animations
+
+// States in order:
+// - State 1
+// - State 2
+// - State 3
+// - State 4
+// - State 2, 3 and 4
+
+// ===========================================================
+
+// Left arm and flame: 3, 4, 61, 62, 65
+// Right arm and flame: 9, 10, 63, 64, 66
+
+#r2d2.run-animation {
+  
+  // State One
+  &.char {
+    
+    .char__shards {
+      transform: translateY(0) rotateZ(0);
+      transition: 1s ease;
+    }
+  
+    .char__shard-wrap {
+
+      &:nth-child(3) .char__shard,
+      &:nth-child(4) .char__shard,
+      &:nth-child(9) .char__shard,
+      &:nth-child(10)  .char__shard {
+        transform: rotateZ(0deg);
+        transition: transform 0.3s 0.7s;
+      }
+
+      &:nth-child(61) .char__shard,
+      &:nth-child(62) .char__shard,
+      &:nth-child(63) .char__shard,
+      &:nth-child(64) .char__shard {
+        transform: translateX(0) translateY(0);
+        transition: transform 0.3s 0.5s;
+      }
+
+      &:nth-child(65) .char__shard,
+      &:nth-child(66) .char__shard {
+        background: #3575D2;
+        transition: clip-path 0.3s, transform 0s; 
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #7cfef9;
+            transition: clip-path 0.5s;
+        }
+      }
+
+      &:nth-child(3) .char__shard,
+      &:nth-child(4) .char__shard{
+        transform-origin: 36.328% 41.375%;
+      }
+
+      &:nth-child(61) .char__shard,
+      &:nth-child(62) .char__shard {
+        transform-origin: 36.328% 41.375%;
+      }
+
+      &:nth-child(65) .char__shard {
+        clip-path: polygon( 36.719% 57.125% ,37.344% 57.125% ,37.969% 57.125% );
+        transform: translateX(-2.5%) translateY(-5.5%);
+
+        &::after {
+            clip-path: polygon(36.719% 57.125% ,37.344% 57.125% ,37.969% 57.125%);
+        }
+      }
+
+      &:nth-child(9) .char__shard,
+      &:nth-child(10) .char__shard {
+        transform-origin: 63.750% 41.250%;
+      }
+
+      &:nth-child(63) .char__shard,
+      &:nth-child(64) .char__shard {
+        transform-origin: 63.750% 41.250%;
+      }
+
+      &:nth-child(66) .char__shard {
+        clip-path: polygon( 62.031% 57.250% ,62.656% 57.250% ,63.281% 57.250% );
+        transform: translateX(2.5%) translateY(-5.5%);
+
+        &::after {
+        clip-path: polygon(62.031% 57.250% ,62.656% 57.250% ,63.281% 57.250%);
+        }            
+      }
+    }
+  }
+  
+  // State Two
+  &.state-two.char {
+  
+    .char__shadow--r2d2 {
+      transition: 0.5s ease 1.5s;
+      transform: scale(1.2)
+    }
+      
+    .char__shards {
+        transform: translateY(-7%) rotateZ(1deg);
+        transition: transform 0.5s 1.5s;
+    }
+
+    .char__shard-wrap {
+      
+      &:nth-child(3) .char__shard,
+      &:nth-child(4) .char__shard,
+      &:nth-child(9) .char__shard,
+      &:nth-child(10) .char__shard {
+        transition: transform 0.3s 0.5s;
+      }
+
+      &:nth-child(61) .char__shard,
+      &:nth-child(62) .char__shard,
+      &:nth-child(63) .char__shard,
+      &:nth-child(64) .char__shard {
+        transition: transform 0.3s 0.7s;
+      }
+      &:nth-child(65) .char__shard,
+      &:nth-child(66) .char__shard {
+        transition: clip-path 0.2s 1.45s;
+      }
+
+      &:nth-child(65) .char__shard {
+        clip-path: polygon( 36.719% 57.125% ,37.344% 69.125% ,37.969% 57.125% );
+        
+        &::after {
+            clip-path: polygon( 36.719% 57.125% ,37.344% 61.125% ,37.969% 57.125% );
+        }
+      }
+      &:nth-child(66) .char__shard {
+        clip-path: polygon( 62.031% 57.250% ,62.656% 69.250% ,63.281% 57.250% );
+        
+        &::after {
+            clip-path: polygon( 62.031% 57.250% ,62.656% 61.250% ,63.281% 57.250% );
+        }
+      }
+    }
+  }
+  
+  // State Three
+  &.state-three.char {
+
+    .char__shadow--r2d2 {
+        transform: scale(1.1);
+        transition: 1s ease;
+    }
+    .char__shards {
+      transform: translateY(-3%) rotateZ(-1deg);
+      transition: 1s;
+    }
+    .char__shard-wrap {
+
+      &:nth-child(65) .char__shard,
+      &:nth-child(66) .char__shard {
+        transition: clip-path 1s;
+      }
+
+      &:nth-child(65) .char__shard {
+        clip-path: polygon( 36.719% 57.125% ,37.344% 64.125% ,37.969% 57.125% );
+
+        &::after {
+          clip-path: polygon( 36.719% 57.125% ,37.344% 60.125% ,37.969% 57.125% );
+        }
+      }
+
+      &:nth-child(66) .char__shard {
+        clip-path: polygon( 62.031% 57.250% ,62.656% 64.250% ,63.281% 57.250% );
+
+        &::after {
+          clip-path: polygon( 62.031% 57.250% ,62.656% 60.250% ,63.281% 57.250% );
+        }
+      }
+    }
+  }
+  
+  // State Four
+  &.state-four.char {
+
+    .char__shadow--r2d2 {
+        transform: scale(1.3);
+        transition: 0.85s ease;
+    }
+
+    .char__shards {
+      transform: translateY(-15%) rotateZ(0);
+      transition: 0.75s;
+    }
+
+    .char__shard-wrap {
+
+      &:nth-child(65) .char__shard,
+      &:nth-child(66) .char__shard {
+        transition: clip-path 0.65s;
+      }
+
+      &:nth-child(65) .char__shard {
+        clip-path: polygon( 36.719% 57.125% ,37.344% 72.125% ,37.969% 57.125% );
+
+        &::after {
+          clip-path: polygon( 36.719% 57.125% ,37.344% 63.125% ,37.969% 57.125% );
+        }
+      }
+
+      &:nth-child(66) .char__shard {
+        clip-path: polygon( 62.031% 57.250% ,62.656% 72.250% ,63.281% 57.250% );
+
+        &::after {
+          clip-path: polygon( 62.031% 57.250% ,62.656% 63.250% ,63.281% 57.250% );
+        }
+      }
+    }
+  }
+    
+  // State 2, State 3 and State 4
+  &.state-two.char,
+  &.state-three.char,
+  &.state-four.char {
+  
+    .char__shard-wrap {
+  
+      &:nth-child(3) .char__shard,
+      &:nth-child(4) .char__shard{
+        transform: rotateZ(45deg);
+      }
+  
+      &:nth-child(61) .char__shard,
+      &:nth-child(62) .char__shard {
+        transform: translateX(-2.5%) translateY(-5.5%);
+      }
+  
+      &:nth-child(9) .char__shard,
+      &:nth-child(10) .char__shard {
+        transform: rotateZ(-45deg);
+      }
+  
+      &:nth-child(63) .char__shard,
+      &:nth-child(64) .char__shard {
+        transform: translateX(2.5%) translateY(-5.5%);
+      }
+    }
+  }
+}

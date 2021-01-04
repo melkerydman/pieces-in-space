@@ -1,0 +1,301 @@
+// ===========================================================
+// Left foot: 1, 2 
+// Right foot: 3, 4 
+// First body part: 5-18
+// Staff: 19-21
+// Hand: 22-23
+// Second body part: 24-30
+// Head: 31-37
+// Left eye: 38-41
+// Head: 42-46
+// Right eye: 47-50
+// Head: 51-60
+// Lower lid (for animation): 65, 66 
+
+#yoda.char {
+
+  // Shadow
+  .char__shadow {
+    &--yoda {
+      opacity: 1;  // Make shadow visible
+
+      &::before {
+        width: 20%;
+        bottom: 20%;
+        left: 46%;
+        height: 25%;
+        opacity: inherit; // Make shadow visible
+      }
+      &::after {
+        opacity: 0; // Hide shadow
+      }
+    }
+  }
+
+  // Adjust character to scale
+  @media only screen and (min-width: 768px) {
+    .char__wrap {
+      transform: scale(var(--char-sz-yoda)); // Adjust scale to match other characters
+    }
+  }
+  
+  .char__shard-wrap {
+    
+    // Place robe above hand
+    &:nth-child(14),
+    &:nth-child(15) {
+      z-index: 5;
+    } 
+    
+    // Unique shards
+    &:nth-child(1) .char__shard {
+      clip-path: polygon( 40.781% 85.750% ,46.953% 83.500% ,47.891% 88.625% );
+      background: #638844;
+    }   
+    &:nth-child(2) .char__shard{
+      clip-path: polygon( 46.875% 83.375% ,47.734% 88.625% ,50.234% 85.750% );
+      background: #7BAA55;
+    }   
+    &:nth-child(3) .char__shard{
+      clip-path: polygon( 52.266% 85.625% ,58.594% 83.375% ,59.141% 88.625% );
+      background: #638844;
+    } 
+    &:nth-child(4) .char__shard{
+      clip-path: polygon( 58.516% 83.500% ,59.062% 88.625% ,61.563% 85.500% );
+      background: #7BAA55;
+    } 
+    &:nth-child(5) .char__shard{
+      clip-path: polygon( 37.188% 69.000% ,39.531% 85.875% ,51.875% 85.750% );
+      background: #171515;
+    } 
+    &:nth-child(6) .char__shard{
+      clip-path: polygon( 37.188% 69.125% ,51.641% 85.750% ,54.141% 74.000% );
+      background: #737A6C;
+    } 
+    &:nth-child(7) .char__shard{
+      clip-path: polygon( 50.938% 45.875% ,51.641% 85.750% ,60.781% 65.375% );
+      background: #9DA58B;
+    } 
+    &:nth-child(8) .char__shard{
+      clip-path: polygon( 51.484% 85.750% ,60.156% 85.250% ,60.781% 64.875% );
+      background: #91988A;
+    } 
+    &:nth-child(9) .char__shard{
+      clip-path: polygon( 59.922% 85.125% ,60.625% 64.750% ,64.063% 86.625% );
+      background: #D3E1C5;
+    } 
+    &:nth-child(10) .char__shard {
+      clip-path: polygon( 35.313% 67.750% ,38.125% 60.625% ,49.375% 79.625% );
+      background: #91988A;
+    } 
+    &:nth-child(11) .char__shard {
+      clip-path: polygon( 38.047% 60.750% ,49.375% 79.625% ,54.141% 74.000% );
+      background: #9DA58B;
+    } 
+    &:nth-child(12) .char__shard {
+      clip-path: polygon( 36.953% 40.500% ,38.047% 60.875% ,45.000% 70.125% );
+      background: #91988A;
+    } 
+    &:nth-child(13) .char__shard {
+      clip-path: polygon( 40.000% 51.875% ,45.000% 70.125% ,54.141% 74.000% );
+      background: #BAC6AE;
+    } 
+    &:nth-child(14) .char__shard {
+      clip-path: polygon( 39.922% 51.875% ,53.984% 73.875% ,55.469% 42.250% );
+      background: #D3E1C5;
+    } 
+    &:nth-child(15) .char__shard {
+      clip-path: polygon( 44.531% 59.000% ,54.141% 74.250% ,54.922% 59.875% );
+      background: #9DA58B;
+    } 
+    &:nth-child(16) .char__shard {
+      clip-path: polygon( 50.938% 46.375% ,58.438% 41.625% ,60.781% 65.500% );
+      background: #737A6C;
+    } 
+    &:nth-child(17) .char__shard {
+      clip-path: polygon( 58.359% 41.500% ,60.703% 65.875% ,62.813% 53.500% );
+      background: #D3E1C5;
+    }
+    &:nth-child(18) .char__shard {
+      clip-path: polygon( 36.953% 40.500% ,39.922% 52.000% ,47.109% 47.625% );
+      background: #CEDCC0;
+    }
+    &:nth-child(19) .char__shard {
+      clip-path: polygon( 52.031% 88.375% ,54.063% 88.625% ,56.016% 67.125% );
+      background: #4C2403;
+    }
+    &:nth-child(20) .char__shard {
+      clip-path: polygon( 56.328% 45.500% ,55.703% 68.875% ,57.969% 46.125% );
+      background: #4C2403;
+    }
+    &:nth-child(21) .char__shard {
+      clip-path: polygon( 53.281% 88.500% ,56.875% 66.875% ,57.891% 46.000% );
+      background: #401D00;
+    }
+    &:nth-child(22) .char__shard {
+      clip-path: polygon( 54.141% 47.750% ,59.688% 44.750% ,60.078% 53.625% );
+      background: #638844;
+    }
+    &:nth-child(23) .char__shard {
+      clip-path: polygon( 52.031% 49.000% ,57.891% 43.250% ,59.375% 51.250% );
+      background: #7BAA55;
+    }
+    &:nth-child(24) .char__shard {
+      clip-path: polygon( 36.953% 40.500% ,38.594% 33.250% ,43.906% 28.500% );
+      background: #D3E1C5;
+    }
+    &:nth-child(25) .char__shard {
+      clip-path: polygon( 36.953% 40.500% ,43.516% 28.375% ,47.031% 47.750% );
+      background: #BAC6AE;
+    }
+    &:nth-child(26) .char__shard {
+      clip-path: polygon( 43.281% 28.750% ,46.953% 47.875% ,50.781% 45.500% );
+      background: #91988A;
+    }
+    &:nth-child(27) .char__shard {
+      clip-path: polygon( 43.281% 29.250% ,50.547% 45.625% ,52.812% 32.000% );
+      background: #3D2A19;
+    }
+    &:nth-child(28) .char__shard {
+      clip-path: polygon( 50.234% 45.750% ,52.812% 31.875% ,53.828% 43.500% );
+      background: #91988A;
+    }
+    &:nth-child(29) .char__shard {
+      clip-path: polygon( 52.656% 31.625% ,53.750% 44.875% ,58.516% 41.750% );
+      background: #BAC6AE;
+    }
+    &:nth-child(30) .char__shard {
+      clip-path: polygon( 52.422% 31.625% ,56.250% 35.125% ,58.750% 42.375% );
+      background: #D3E1C5;
+    }
+    &:nth-child(31) .char__shard {
+      clip-path: polygon( 42.891% 23.125% ,43.359% 29.250% ,49.531% 35.375% );
+      background: #4A6633;
+    }
+    &:nth-child(32) .char__shard {
+      clip-path: polygon( 42.891% 23.625% ,49.453% 35.500% ,52.891% 32.125% );
+      background: #56773C;
+    }
+    &:nth-child(33) .char__shard {
+      clip-path: polygon( 42.656% 23.500% ,51.797% 25.500% ,52.734% 32.250% );
+      background: #638844;
+    }
+    &:nth-child(34) .char__shard {
+      clip-path: polygon( 51.641% 25.625% ,52.656% 32.250% ,56.719% 25.750% );
+      background: #6F994D;
+    }
+    &:nth-child(35) .char__shard {
+      clip-path: polygon( 51.719% 25.750% ,54.297% 26.875% ,55.859% 25.875% );
+      background: #3B4022;
+    }
+    &:nth-child(36) .char__shard {
+      clip-path: polygon( 42.969% 23.750% ,44.844% 18.125% ,51.797% 25.750% );
+      background: #6F994D;
+    }
+    &:nth-child(37) .char__shard {
+      clip-path: polygon( 43.594% 17.625% ,51.719% 25.875% ,54.141% 17.875% );
+      background: #7BAA55;
+    }
+    &:nth-child(38) .char__shard {
+      clip-path: polygon( 47.344% 17.750% ,51.563% 23.125% ,54.063% 18.000% );
+      background: #4A6633;
+    }
+    &:nth-child(39) .char__shard {
+      clip-path: polygon( 49.766% 20.000% ,51.953% 21.625% ,52.734% 20.000% );
+      background: #FFFFFF;
+    }
+    &:nth-child(40) .char__shard {
+      clip-path: polygon( 50.859% 20.000% ,51.953% 21.500% ,52.344% 20.000% );
+      background: #000000;
+    }
+    &:nth-child(41) .char__shard {
+      clip-path: polygon( 49.063% 20.125% ,51.328% 18.000% ,52.969% 20.125% );
+      background: #A3C388;
+    }
+    &:nth-child(42) .char__shard {
+      clip-path: polygon( 51.641% 25.750% ,53.984% 18.000% ,56.641% 25.875% );
+      background: #88B266;
+    }
+    &:nth-child(43) .char__shard {
+      clip-path: polygon( 53.203% 22.875% ,54.063% 21.250% ,54.922% 22.750% );
+      background: #A3C388;
+    }
+    &:nth-child(44) .char__shard {
+      clip-path: polygon( 53.203% 22.875% ,54.922% 22.750% ,54.141% 23.625% );
+      background: #3B4022;
+    }
+    &:nth-child(45) .char__shard {
+      clip-path: polygon( 53.828% 18.125% ,56.563% 26.000% ,57.500% 19.375% );
+      background: #7BAA55;
+    }
+    &:nth-child(46) .char__shard {
+      clip-path: polygon( 51.719% 12.750% ,55.469% 14.875% ,58.359% 21.125% );
+      background: #F4F4F4;
+    }
+    &:nth-child(47) .char__shard {
+      clip-path: polygon( 53.984% 18.125% ,56.328% 23.750% ,57.344% 19.500% );
+      background: #4A6633;
+    }
+    &:nth-child(48) .char__shard {
+      clip-path: polygon( 55.078% 20.625% ,56.094% 22.250% ,56.953% 20.875% );
+      background: #FFFFFF;
+    }
+    &:nth-child(49) .char__shard {
+      clip-path: polygon( 55.391% 20.500% ,56.641% 20.750% ,56.094% 22.250% );
+      background: #000000;
+    }
+    &:nth-child(50) .char__shard {
+      clip-path: polygon( 54.922% 20.625% ,55.625% 18.750% ,57.031% 21.000% );
+      background: #A3C388;
+    }
+    &:nth-child(51) .char__shard {
+      clip-path: polygon( 56.563% 26.000% ,57.266% 19.375% ,61.094% 19.250% );
+      background: #96BB77;
+    }
+    &:nth-child(52) .char__shard {
+      clip-path: polygon( 43.594% 17.625% ,50.859% 14.875% ,53.984% 18.125% );
+      background: #88B266;
+    }
+    &:nth-child(53) .char__shard {
+      clip-path: polygon( 53.828% 18.125% ,55.391% 16.500% ,57.422% 19.500% );
+      background: #B0CC99;
+    }
+    &:nth-child(54) .char__shard {
+      clip-path: polygon( 43.359% 18.125% ,46.641% 12.250% ,51.094% 15.250% );
+      background: #7BAA55;
+    }
+    &:nth-child(55) .char__shard {
+      clip-path: polygon( 40.781% 28.875% ,42.891% 18.000% ,46.406% 18.625% );
+      background: #F4F4F4;
+    }
+    &:nth-child(56) .char__shard {
+      clip-path: polygon( 39.922% 24.500% ,45.156% 13.875% ,47.969% 17.250% );
+      background: #F4F4F4;
+    }
+    &:nth-child(57) .char__shard {
+      clip-path: polygon( 38.281% 16.625% ,44.219% 23.500% ,47.188% 18.250% );
+      background: #7BAA55;
+    }
+    &:nth-child(58) .char__shard {
+      clip-path: polygon( 46.563% 12.375% ,51.250% 11.000% ,51.094% 15.500% );
+      background: #88B266;
+    }
+    &:nth-child(59) .char__shard {
+      clip-path: polygon( 51.172% 11.125% ,50.781% 15.375% ,53.984% 18.250% );
+      background: #96BB77;
+    }
+    &:nth-child(60) .char__shard {
+      clip-path: polygon( 51.094% 11.000% ,53.906% 18.250% ,55.469% 16.500% );
+      background: #A3C388;
+    }
+    &:nth-child(65) .char__shard {
+      clip-path: polygon( 51.953% 21.625% ,51.953% 21.625% ,51.953% 21.625% );
+      background: #88B266;
+    }
+    &:nth-child(66) .char__shard {
+      clip-path: polygon( 56.094% 22.250% ,56.094% 22.250% ,56.094% 22.250% );
+      background: #88B266;
+    
+    } // End of Unique shards
+  }
+}

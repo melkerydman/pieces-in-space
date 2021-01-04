@@ -1,0 +1,14 @@
+// Star Wars font
+@font-face {
+    font-family: Starjedi;
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/718469/Starjedi.ttf');
+    font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=PT+Serif:ital@0;1&display=swap');
+
+:root {
+    --ff-primary: 'Starjedi';                   // Normal
+    --ff-logo-sub: 'PT Serif', serif;           // 400, 400 Italic
+    --ff-secondary: 'News Cycle', sans-serif;   // 400, 700 (for future use)
+}

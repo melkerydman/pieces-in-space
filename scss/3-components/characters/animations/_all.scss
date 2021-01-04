@@ -1,0 +1,17 @@
+.run-animation {
+  
+  .char__shard-wrap {
+    
+    &--peripheral,
+    &--animation {
+      display: block;
+    }
+  }
+
+  .char__shard-wrap {
+    transition: 1s ease-in-out;
+  }
+  .char__shard {
+    transition: .6s 0s cubic-bezier(0.7, 0.3, 0, 1);
+  }
+}
